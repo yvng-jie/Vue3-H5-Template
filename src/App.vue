@@ -1,5 +1,5 @@
 <script setup>
-  import { RouterView } from "vue-router"
+  import { RouterView, RouterLink } from "vue-router"
   import { useI18n } from "vue-i18n"
   const { t, locale } = useI18n()
 
@@ -9,12 +9,26 @@
 </script>
 
 <template>
-  <h1 class="text-3xl font-bold underline">Hello world!</h1>
+  <h1 class="text-xs font-bold underline">Hello Vue3-H5-Template!</h1>
   <div class="flex gap-2">
-    <button @click="toggleLocale">Toggle Locale</button>
-      {{ t("test") }}
+    <van-button
+      type="primary"
+      @click="toggleLocale"
+      >{{ t("ToggleLocale") }}</van-button
+    >
   </div>
 
+  <van-row class="flex justify-center item-center text-xs gap-x-2">
+    <van-col>
+      <router-link to="/">{{ t("Home") }}</router-link>
+    </van-col>
+    <van-col>
+      <router-link to="/portfolio">{{ t("Portfolio") }}</router-link>
+    </van-col>
+    <van-col>
+      <router-link to="/team">{{ t("Team") }}</router-link>
+    </van-col>
+  </van-row>
   <RouterView />
 </template>
 
@@ -26,7 +40,7 @@
     min-height: 100dvh;
     display: flex;
     flex-direction: column;
-    row-gap: 1rem;
+    row-gap: 12px;
     justify-content: center;
     align-items: center;
     color: #2c3e50;
