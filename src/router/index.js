@@ -1,26 +1,26 @@
-import { createRouter, createWebHistory } from "vue-router"
+import { createRouter, createWebHistory } from 'vue-router'
 
-// 路由配置示例
+// Route configuration example
 const routes = [
   {
-    path: "/",
-    name: "Home",
-    component: () => import("../views/Home.vue"),
+    path: '/',
+    name: 'Home',
+    component: () => import('../views/Home.vue'),
   },
   {
-    path: "/portfolio",
-    name: "Portfolio",
-    component: () => import("../views/Portfolio.vue"),
+    path: '/portfolio',
+    name: 'Portfolio',
+    component: () => import('../views/Portfolio.vue'),
   },
   {
-    path: "/team",
-    name: "Team",
-    component: () => import("../views/Team.vue"),
+    path: '/team',
+    name: 'Team',
+    component: () => import('../views/Team.vue'),
   },
   {
-    path: "/contact",
-    name: "Contact",
-    component: () => import("../views/Contact.vue"),
+    path: '/contact',
+    name: 'Contact',
+    component: () => import('../views/Contact.vue'),
   },
 ]
 
